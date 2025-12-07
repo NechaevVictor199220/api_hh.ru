@@ -1,0 +1,33 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503, E501, F401, F403
+
+# Исключаем всё кроме нужных директорий
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    .env,
+    env,
+    venv,
+    build,
+    dist,
+    .pytest_cache,
+    .mypy_cache,
+    .coverage,
+    htmlcov,
+    *.egg-info,
+    data,
+    logs,
+    temp,
+    tmp
+
+# Игнорирование конкретных файлов
+per-file-ignores =
+    __init__.py: F401
+    tests/__init__.py: F401
+    src/online_store/__init__.py: F401
+
+# Явно указываем какие файлы проверять
+filename =
+    *.py
